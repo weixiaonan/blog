@@ -24,15 +24,14 @@ class TestController extends Controller
 	
 	public function index()
 	{
-	    //print_r($id . $name);
 
         // 获取没有查询字符串的当前的 URL ...
         echo url()->current() . '<br>';
 
-// 获取包含查询字符串的当前的 URL ...
+        // 获取包含查询字符串的当前的 URL ...
         echo url()->full() . '<br>';
 
-// 获取上一个请求的完整的 URL...
+        // 获取上一个请求的完整的 URL...
         echo url()->previous() . '<br>';
 
         $url = action('TestController@index', ['ids' => 2]);
